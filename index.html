@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chart Generator</title>
+</head>
+
+<body onload="init()">
+
+    <div class="header-Conatiner">
+
+        <div class="main-layout">
+            <div class="logo">
+                <h1>Chart Generator</h1>
+            </div>
+
+            <div class="nav-bar">
+                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#">My-Chart</a>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="main-container">
+        <div class="arc" onclick="openEditor('arc')">
+
+        </div>
+        <div class="rect" onclick="openEditor('rect')">
+
+        </div>
+
+    </div>
+
+
+
+    <div class="main-container-editor">
+        <div class="main-layout">
+
+            <div class="left-side-conatiner">
+                <div class="left-side">
+                    <canvas class="left-side" id="canvas" height="320" width="426"></canvas>
+                </div>
+            </div>
+
+            <div class="right-side-container">
+                <button class="exit-editor" onclick="closeEditor() ">x</button>
+                <div class="right-side">
+                    <input class="title" type="text" onkeyup=" onAddTitle(this)" data-trans="Search"
+                        placeholder="Title">
+                    <div class="terms">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="js/main-controler.js"></script>
+    <script src="js/chart-services.js"></script>
+</body>
+
+</html>
